@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<!--THIS IS OUR POKEMON TEAM-->
+
+<!--Set up pokemonNamespace in which you can find the pokemon tags to validate this document-->
+<Team>
+
+    <Pokemon nickname="GreenRipper">
+        <species>BULBASAUR</species>
+        <dex>1</dex>
+        <types>
+            <type>GRASS</type>
+            <type>POISON</type>
+        </types>
+        <experience>64</experience>
+        <moves>
+            <attack>
+                <name>RAZOR LEAF</name>
+                <type>GRASS</type>
+                <power>55</power>
+            </attack>
+            <attack>
+                <name>SOLAR BEAM</name>
+                <type>GRASS</type>
+                <power>110</power>
+            </attack>
+            <effect>
+                <name>SLEEP POWDER</name>
+                <type>GRASS</type>
+            </effect>
+            <effect>
+                <name>CONFUSION</name>
+                <type>NORMAL</type>
+            </effect>
+        </moves>
+    </Pokemon>
+
+    <Pokemon>
+        <species>PIKACHU</species>
+        <dex>25</dex>
+        <types>
+            <type>ELECTRIC</type>
+        </types>
+        <experience>76</experience>
+        <moves>
+            <attack>
+                <name>THUNDERBOLT</name>
+                <type>ELECTRIC</type>
+                <power>75</power>
+            </attack>
+            <attack>
+                <name>ACTION</name>
+                <type>NORMAL</type>
+                <power>35</power>
+            </attack>
+        </moves>
+    </Pokemon>
+
+    <Pokemon>
+        <species>PSYDUCK</species>
+        <dex>54</dex>
+        <types>
+            <type>WATER</type>
+        </types>
+        <experience>12</experience>
+        <moves>
+            <attack>
+                <name>WATER GUN</name>
+                <type>WATER</type>
+                <power>60</power>
+            </attack>
+        </moves>
+    </Pokemon>
+    
+</Team>

@@ -1,0 +1,65 @@
+[
+    {
+        "@nickname": "GreenRipper",
+        "species": "BULBASAUR",
+        "dex": 1,
+        "types": ["GRASS", "POISON"],
+        "experience": 64,
+        "moves":
+            [
+                {
+                    "name": "RAZOR LEAF",
+                    "type": "GRASS",
+                    "power": 55
+                },
+                {
+                    "name": "SOLAR BEAM",
+                    "type": "GRASS",
+                    "power": 110
+                },
+                {
+                    "name": "SLEEP POWDER",
+                    "type": "GRASS"
+                },
+                {
+                    "name": "CONFUSION",
+                    "type": "NORMAL"
+                }
+            ]
+    },
+    {
+        "species": "PIKACHU",
+        "dex": 25,
+        "types": ["ELECTRIC"],
+        "experience": 76,
+        "moves":
+            [
+                {
+                    "name": "THUNDERBOLT",
+                    "type": "ELECTRIC",
+                    "power": 60
+                },
+                {
+                    "name": "ACTION",
+                    "type": "NORMAL",
+                    "power": 35
+                }
+            ]
+    },
+    {
+        "species": "PSYDUCK",
+        "dex": 54,
+        "types": ["WATER"],
+        "experience": 12,
+        "moves":
+            [
+                {
+                    "name": "WATER GUN",
+                    "type": "WATER",
+                    "power": 50
+                }
+            ]
+                
+        
+    }
+]

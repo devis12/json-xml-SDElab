@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <element name="Team">
+        <complexType>
+            <sequence>
+                <element name="Pokemon" maxOccurs="unbounded">
+                    <complexType>
+                        <all>
+                            
+                            <element name="species" type="string"/>
+                            
+                            <element name="dex" type="string"/>
+                            
+                            <element name="experience">
+                                <simpleType>
+                                    <restriction base="integer">
+                                        <minInclusive value="1"/>
+                                        <maxInclusive value="100"/>
+                                    </restriction> 
+                                </simpleType>
+                            </element>
+
+                            <element name="types">
+                                <complexType>
+                                    <sequence>
+                                        <element name="type" type="string" minOccurs="1" maxOccurs="2"/>
+                                    </sequence>
+                                </complexType>
+                            </element>
+
+                            <element name="moves">
+                                <complexType>
+                                    <choice maxOccurs="4">
+                                        <element name="attack">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="name" type="string" minOccurs="1" maxOccurs="1"/>
+                                                    <element name="type" type="string" minOccurs="1" maxOccurs="1"/>
+                                                    <element name="power" minOccurs="1" maxOccurs="1">
+                                                        <simpleType>
+                                                            <restriction base="integer">
+                                                                <minInclusive value="10"/>
+                                                                <maxInclusive value="130"/>
+                                                            </restriction> 
+                                                        </simpleType>
+                                                    </element>
+                                                </sequence>
+                                            </complexType>
+                                        </element>
+
+                                        <element name="effect">
+                                            <complexType>
+                                                <sequence>
+                                                    <element name="name" type="string" minOccurs="1" maxOccurs="1"/>
+                                                    <element name="type" type="string" minOccurs="1" maxOccurs="1"/>
+                                                </sequence>
+                                            </complexType>
+                                        </element>
+
+                                    </choice>
+                                </complexType>
+                            </element>
+
+                        </all>
+                        <attribute name="nickname" type="string"/>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+
+</schema>

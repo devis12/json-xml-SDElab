@@ -1,0 +1,87 @@
+  {
+    "$id": "pokemonJSONSchema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A representation of a pokemon team",
+    "type": "array",
+    "items": { "$ref": "#/definitions/Pokemon" },
+    "maxItems": 6,
+
+    "definitions": {
+      "Pokemon": {
+        "type": "object",
+        "properties": {
+            "@nickname":{
+                "type": "string",
+                "description": "Optional name you could give to the pokemon"
+            },
+
+            "species": {
+                "type": "string",
+                "description": "The name of the pokemon species this pokemon belongs to"
+            },
+            "dex": {
+                "type": "integer",
+                "description": "Number on the pokedex of this pokemon"
+            },
+            "experience":{
+                "type": "integer",
+                "description": "Experience level of the pokemon",
+                "minimum": 1,
+                "maximum": 100
+            },
+            "types":{
+                "type": "array",
+                "items": {"type": "string"},
+                "minItems": 1,
+                "maxItems": 2
+            },
+            "moves":{
+                "type" : "array",
+                "items":
+                    {
+                        "anyOf":
+                        [
+                            { "$ref": "#/definitions/attack" },
+                            { "$ref": "#/definitions/effect" }
+                        ]
+                    },
+                "minItems": 0,
+                "maxItems": 4
+                
+            }
+
+        },
+        "required": ["species", "dex", "experience", "types", "moves"]
+      },
+      "attack":{
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the pokemon attack"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the pokemon attack"
+          },
+          "power": {
+            "type": "integer",
+            "description": "Power of the pokemon attack"
+          }
+        }
+      },
+      "effect":{
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the pokemon effect"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the pokemon effect"
+          }
+        }
+      }
+    }
+  }

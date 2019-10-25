@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            targetNamespace="pokemonNamespace"
+            xmlns:pkm="pokemonNamespace"
+            elementFormDefault="qualified">
+
+    <xsd:element name="Team" type="pkm:TeamType" />
+
+    <!--Definition of the type team-->
+    <xsd:complexType name="TeamType">
+        <xsd:sequence>
+            <!--A team can have at most 6 pokémon-->
+            <xsd:element name="Pokemon" maxOccurs="6" type="pkm:PokemonType" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!--Definition of the pokémon-->
+    <xsd:complexType name="PokemonType">
+        <xsd:all>
+            <!--Specie of the pokémon-->
+            <xsd:element name="species" type="xsd:string"/>
+            
+            <!--Number in pokédex of the pokémon-->
+            <xsd:element name="dex" type="xsd:string"/>
+            
+            <!--Experience level of the pokémon-->
+            <xsd:element name="experience">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:integer">
+                        <xsd:minInclusive value="1"/>
+                        <xsd:maxInclusive value="100"/>
+                    </xsd:restriction> 
+                </xsd:simpleType>
+            </xsd:element>
+            
+            <!--Types of the pokemon: could be one or two (e.g. WATER, GRASS, NORMAL,...)-->
+            <xsd:element name="types">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="type" type="xsd:string" minOccurs="1" maxOccurs="2"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+            <!--Moves of the pokémon-->
+            <xsd:element name="moves">
+                <xsd:complexType>
+                    <!--Each pokémon could have at most 4 moves in total, which could be of any type (attacks, effects,...)-->
+                    <xsd:choice maxOccurs="4">
+                        <xsd:element name="attack" type="pkm:attack" />
+                        <xsd:element name="effect" type="pkm:effect" />
+                    </xsd:choice>
+                </xsd:complexType>
+            </xsd:element>
+            
+        </xsd:all>
+
+        <!--Attributes for a pokemon-->
+        <xsd:attribute name="nickname" type="xsd:string"/><!--Nickname is not necessary-->
+    </xsd:complexType>
+
+    <!--Pokémon move attack-->
+    <xsd:complexType name="attack">
+        <xsd:sequence>
+            <!--Name of the attack-->
+            <xsd:element name="name" type="xsd:string"/>
+            
+            <!--Type of the attack (e.g. WATER, ELECTRIC,...)-->
+            <xsd:element name="type" type="xsd:string"/>
+
+            <!--Power of the attack-->
+            <xsd:element name="power">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:integer">
+                        <xsd:minInclusive value="10"/>
+                        <xsd:maxInclusive value="130"/>
+                    </xsd:restriction> 
+                </xsd:simpleType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <!--Pokémon effect attack-->
+    <xsd:complexType name="effect">
+        <xsd:sequence>
+            <!--Name of the effect-->
+            <xsd:element name="name" type="xsd:string"/>
+
+            <!--Type of the effect (e.g. WATER, ELECTRIC,...)-->
+            <xsd:element name="type" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

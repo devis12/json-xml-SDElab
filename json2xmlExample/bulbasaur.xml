@@ -1,0 +1,8 @@
+<Pokemon nickname="GreenRipper">
+    <species>BULBASAUR</species>
+    <dex>1</dex>
+    <types>
+        <type>GRASS</type>
+        <type>POISON</type>
+    </types>
+</Pokemon>
