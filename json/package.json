@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "json-beautify": "^1.1.1",
+    "jsonata": "^1.7.0",
     "jsonpath": "^1.0.2",
     "jsonpath-plus": "^1.1.0",
     "jsonschema": "^1.2.4"
