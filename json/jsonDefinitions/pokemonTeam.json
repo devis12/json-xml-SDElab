@@ -15,7 +15,7 @@
       "Pokemon": {
         "type": "object",
         "properties": {
-            "@nickname":{
+            "nickname":{
                 "type": "string",
                 "description": "Optional name you could give to the pokemon"
             },
