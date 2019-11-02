@@ -1,5 +1,5 @@
 if(process.argv.length != 4){
-  console.log("Wrong schema invocation! \"node jsonPath.js <instance.json> <jsonPath query>\"");
+  console.log("Wrong schema invocation! \"node jsonata.js <instance.json> <jsonPath query>\"");
   return;
 }else if(!require('fs').existsSync(process.argv[2])){
   console.log("File doesn't exist");

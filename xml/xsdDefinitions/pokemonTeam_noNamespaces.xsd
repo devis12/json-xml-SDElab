@@ -10,7 +10,7 @@
                             
                             <element name="species" type="string"/>
                             
-                            <element name="dex" type="string"/>
+                            <element name="dex" type="integer"/>
                             
                             <element name="experience">
                                 <simpleType>

@@ -1,0 +1,11 @@
+{
+"Pokemon":{
+    "nickname":"GreenRipper",
+    "species":"BULBASAUR",
+    "dex":"1",
+    "types":
+        {"type":
+            ["GRASS","POISON"]
+        }
+    }
+}

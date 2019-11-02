@@ -21,7 +21,7 @@
             <xsd:element name="species" type="xsd:string"/>
             
             <!--Number in pokédex of the pokémon-->
-            <xsd:element name="dex" type="xsd:string"/>
+            <xsd:element name="dex" type="xsd:integer"/>
             
             <!--Experience level of the pokémon-->
             <xsd:element name="experience">
