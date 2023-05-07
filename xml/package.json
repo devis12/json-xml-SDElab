@@ -13,7 +13,7 @@
   "author": "devis12",
   "license": "ISC",
   "dependencies": {
-    "libxmljs": "^0.19.7",
+    "libxmljs": "^0.19.8",
     "xmldom": "^0.6.0",
     "xpath": "0.0.27"
   }
